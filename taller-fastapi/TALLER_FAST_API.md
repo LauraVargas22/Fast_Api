@@ -4,7 +4,7 @@
 
 La implementación completa de esta práctica, incluyendo el código fuente, el archivo de almacenamiento y las evidencias de funcionamiento, se encuentra en el siguiente repositorio de GitHub:
 
-**Repositorio:** [Agregar enlace del repositorio de GitHub aquí](URL_DEL_REPOSITORIO)
+**Repositorio:** [LauraVargas22/Fast_Api](https://github.com/LauraVargas22/Fast_Api)
 
 ## 1. ¿Qué es una API REST y cuáles son sus métodos principales?
 
@@ -77,4 +77,3 @@ Una base de datos, por el contrario, está diseñada para administrar grandes ca
 ## Conclusiones
 
 FastAPI facilita la construcción de servicios REST gracias a su integración con los métodos HTTP, la documentación automática y la validación mediante Pydantic. El almacenamiento en JSON permitió desarrollar y comprobar rápidamente las operaciones CRUD de esta práctica, pero una aplicación destinada a producción debería utilizar una base de datos como PostgreSQL, MySQL o SQLite, dependiendo de sus necesidades de concurrencia, volumen y despliegue.
-

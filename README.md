@@ -14,13 +14,15 @@ API REST desarrollada como parte del taller de **Sistemas Distribuidos**. Permit
 ## Estructura del proyecto
 
 ```text
-taller-fastapi/
-├── imagenes/             # Evidencias de los ejercicios
-├── venv/
-│   ├── main.py           # Endpoints de la API
-│   ├── modelos.py        # Modelos de datos de Pydantic
-│   └── almacenamiento.py # Lectura y escritura del archivo JSON
-├── tareas.json           # Almacenamiento de las tareas
+Fast_Api/
+├── taller-fastapi/
+│   ├── imagenes/             # Evidencias de los ejercicios
+│   ├── venv/
+│   │   ├── main.py           # Endpoints de la API
+│   │   ├── modelos.py        # Modelos de datos de Pydantic
+│   │   └── almacenamiento.py # Lectura y escritura del archivo JSON
+│   ├── TALLER_FAST_API.md    # Desarrollo conceptual del taller
+│   └── tareas.json           # Almacenamiento de las tareas
 └── README.md
 ```
 
@@ -90,35 +92,35 @@ http://127.0.0.1:8000/docs
 
 Se utilizó `POST /tareas` desde Swagger UI para registrar las tareas. El servidor asignó automáticamente un identificador a cada una.
 
-![Creación de la primera tarea](imagenes/tarea1.png)
+![Creación de la primera tarea](taller-fastapi/imagenes/tarea1.png)
 
-![Creación de la segunda tarea](imagenes/tarea2.png)
+![Creación de la segunda tarea](taller-fastapi/imagenes/tarea2.png)
 
-![Creación de la tercera tarea](imagenes/tarea3.png)
+![Creación de la tercera tarea](taller-fastapi/imagenes/tarea3.png)
 
 ### 2. Consulta del listado de tareas
 
 Se ejecutó `GET /tareas` para comprobar que las tareas fueron almacenadas correctamente.
 
-![Listado de tareas](imagenes/getTareas.png)
+![Listado de tareas](taller-fastapi/imagenes/getTareas.png)
 
 ### 3. Consulta de una tarea por id
 
 Se consultó una tarea específica mediante `GET /tareas/{tarea_id}`.
 
-![Consulta de una tarea específica](imagenes/getTareaEspecifica.png)
+![Consulta de una tarea específica](taller-fastapi/imagenes/getTareaEspecifica.png)
 
 ### 4. Consulta de un id inexistente
 
 Al solicitar una tarea que no existe, la API respondió con el código HTTP `404 Not Found`.
 
-![Respuesta al consultar una tarea inexistente](imagenes/tareaNoEncontrada.png)
+![Respuesta al consultar una tarea inexistente](taller-fastapi/imagenes/tareaNoEncontrada.png)
 
 ### 5. Verificación del archivo JSON
 
 Se abrió `tareas.json` en el editor para verificar que la información enviada a la API quedó guardada de forma persistente.
 
-![Contenido del archivo tareas.json](imagenes/archivoJson.png)
+![Contenido del archivo tareas.json](taller-fastapi/imagenes/archivoJson.png)
 
 ### 6. Creación de tareas con diferentes estados
 
@@ -128,9 +130,9 @@ Se registraron al menos cinco tareas utilizando valores `true` y `false` en el c
 
 Se utilizó `PUT /tareas/{tarea_id}` para modificar el título y el estado de dos tareas existentes.
 
-![Actualización de la primera tarea](imagenes/putTarea.png)
+![Actualización de la primera tarea](taller-fastapi/imagenes/putTarea.png)
 
-![Actualización de la segunda tarea](imagenes/putTarea2.png)
+![Actualización de la segunda tarea](taller-fastapi/imagenes/putTarea2.png)
 
 > Como se trata de una operación `PUT`, se envían todos los campos editables de la tarea: `titulo`, `descripcion` y `completada`.
 
@@ -138,7 +140,7 @@ Se utilizó `PUT /tareas/{tarea_id}` para modificar el título y el estado de do
 
 Se eliminó una tarea mediante `DELETE /tareas/{tarea_id}`. La operación respondió con el código `204 No Content` y posteriormente se verificó que el elemento ya no aparecía en el listado.
 
-![Eliminación de una tarea](imagenes/deleteTarea.png)
+![Eliminación de una tarea](taller-fastapi/imagenes/deleteTarea.png)
 
 ### 9. Filtro de tareas completadas
 
@@ -148,7 +150,7 @@ Se utilizó el parámetro de consulta `completada=true` para obtener únicamente
 GET /tareas?completada=true
 ```
 
-![Filtro de tareas completadas](imagenes/getTareasCompletadas.png)
+![Filtro de tareas completadas](taller-fastapi/imagenes/getTareasCompletadas.png)
 
 También es posible consultar las tareas pendientes con `GET /tareas?completada=false`.
 
@@ -170,9 +172,9 @@ curl.exe -X POST "http://127.0.0.1:8000/tareas" `
   -d '{"titulo":"Tarea desde curl","descripcion":"Prueba desde la terminal","completada":false}'
 ```
 
-![Primera prueba desde la terminal](imagenes/pruebaTerminal.png)
+![Primera prueba desde la terminal](taller-fastapi/imagenes/pruebaTerminal.png)
 
-![Segunda prueba desde la terminal](imagenes/prueba2Terminal.png)
+![Segunda prueba desde la terminal](taller-fastapi/imagenes/prueba2Terminal.png)
 
 ## Códigos de respuesta principales
 
@@ -183,4 +185,3 @@ curl.exe -X POST "http://127.0.0.1:8000/tareas" `
 | `204 No Content` | Tarea eliminada correctamente |
 | `404 Not Found` | No existe una tarea con el id indicado |
 | `422 Unprocessable Entity` | Los datos enviados no cumplen el modelo esperado |
-
