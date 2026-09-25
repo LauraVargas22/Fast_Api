@@ -1,0 +1,56 @@
+[
+  {
+    "titulo": "Estudiar REST",
+    "descripcion": null,
+    "completada": true,
+    "id": 1
+  },
+  {
+    "titulo": "Trabajo Estadística",
+    "descripcion": "Laboratorio estadística valor esperado y CDF",
+    "completada": true,
+    "id": 2
+  },
+  {
+    "titulo": "Informe mecánica Semana 5",
+    "descripcion": "Informe práctica laboratorio",
+    "completada": true,
+    "id": 3
+  },
+  {
+    "titulo": "Modificación módulo de descuentos",
+    "descripcion": "Parametrización de descuentos por grupo de productos y peso mínimo",
+    "completada": false,
+    "id": 4
+  },
+  {
+    "titulo": "Modificación módulo de descuentos",
+    "descripcion": "Parametrización de descuentos por grupo de productos y peso mínimo",
+    "completada": false,
+    "id": 5
+  },
+  {
+    "titulo": "Toma pedidos multilínea",
+    "descripcion": "Implementación nuevo módulo de toma pedidos",
+    "completada": true,
+    "id": 6
+  },
+  {
+    "titulo": "Publicación en plataforma de pruebas",
+    "descripcion": "Cargar actualización de ajustes realizados en servidor de pruebas",
+    "completada": true,
+    "id": 7
+  },
+  {
+    "titulo": "Taller FastAPI",
+    "descripcion": "Desarrollo del taller de FastAPI",
+    "completada": false,
+    "id": 8
+  },
+  {
+    "titulo": "Mesa técnica cliente capacitación",
+    "descripcion": "Capacitación sobre los ajustes realizados",
+    "completada": false,
+    "id": 10
+  }
+]
